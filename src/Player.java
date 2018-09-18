@@ -5,8 +5,8 @@ public class Player {
     private String name;
     private int score = 0;
 
-    ArrayList<Piece> pieces = new ArrayList<>();
-    Piece piece = new Piece();
+    private ArrayList<Piece> pieces = new ArrayList<>();
+    private Piece piece = new Piece();
 
     @Override
     public String toString() {
@@ -16,7 +16,15 @@ public class Player {
                 '}';
     }
 
-    boolean winner = pieces.size()<0;
+    boolean winner = pieces.size()<1;
+
+    public ArrayList<Piece> getPieces() {
+        return pieces;
+    }
+
+    public void setPieces(ArrayList<Piece> pieces) {
+        this.pieces = pieces;
+    }
 
     public int getScore() {
         return score;
